@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    
+    compile             'io.functionalj:functionalj-all:0.4.1-DEV.0'
+    annotationProcessor 'io.functionalj:functionalj-types:0.4.1-DEV.0'
+    annotationProcessor 'io.functionalj:functionalj-elm:0.4.1-DEV.0'
+    
+    // == Test ==
+    
+    testCompile 'junit:junit:4.12'
+    
+    testCompile             'io.functionalj:functionalj-all:0.4.1-DEV.0'
+    testAnnotationProcessor 'io.functionalj:functionalj-types:0.4.1-DEV.0'
+    testAnnotationProcessor 'io.functionalj:functionalj-elm:0.4.1-DEV.0'
+}
